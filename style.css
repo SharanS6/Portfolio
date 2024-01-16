@@ -4,6 +4,11 @@ body {
 
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -20,6 +25,7 @@ body {
     z-index: 9999;
     background-color: #121212;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
 }
 
@@ -48,11 +54,13 @@ a {
     font-family: "Times New Roman";
             font-weight: bold;
             font-size: 2rem;
+            cursor: pointer;
 }
-.navbar-Container h1:hover{
+.navbar-Container  h1 a:hover{
     color:rgba(252, 1, 152, 0.844);
     transition: all;
     transition-duration: 0.8s;
+    
 }
 
 #navbar-items {
@@ -218,7 +226,7 @@ a {
     background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
     outline: none;
     border: 0.5px solid white;
-    font-size: 2vw;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -289,8 +297,9 @@ a {
     background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
     outline: none;
     border: 0.5px solid white;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    cursor: pointer;
 
 }
 
@@ -319,7 +328,11 @@ a {
 .Skills{
     /* background-color: #4B2944; */
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    padding: 2%;
+    
+    padding-top: 5%;
+    padding-bottom: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .skill-box h2{
     text-align: center;
@@ -359,6 +372,99 @@ a {
     height: 80px;
     
 }
+
+@keyframes SkillList {
+
+        0% {
+            transform: translateY(-10px);
+        }
+    
+        50% {
+            transform: translateY(0px);
+        }
+    
+        100% {
+            transform: translateY(0px);
+        }
+    
+}
+
+.skills_list:hover{
+    box-shadow: rgb(0, 4, 8) 0px 20px 30px -10px;
+   
+    animation: SkillList 3s ease;
+
+}
+
+
+/* Education */
+
+.education{
+    /* background: #121212; */
+    color: aliceblue;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+}
+.education-header{
+    text-align: center;
+}
+.education-tag{
+    color: rgb(9, 1, 6);
+}
+.education-header h2{
+    padding: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.education-header h4{
+    margin-bottom: 10px;
+}
+
+
+.education-container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0;
+}
+.education-list{
+    border: 1px solid none;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-wrap: wrap;
+   max-width:1000px;
+    height: 150px;
+    
+}
+.education-listImg{
+    height: 150px;
+width: 300px;
+    
+}
+.education-listImg img{
+height: 100%;
+width: 100%;
+    
+}
+.education-listdetails{
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.education-listdetails h2{
+    color: #1c0068;
+}
+.education-listdetails p{
+    color: antiquewhite;
+}
+
 
 /* footer */
 .Footer {
@@ -413,18 +519,49 @@ a {
 
 .footer-designed {
     position: absolute;
-    left: 40vw;
+    left: 45%;
     right: auto;
-    top: 85%;
+    /* top: 85%; */
+    bottom: 3%;
     font-weight: 600;
     letter-spacing: 0.8px;
     margin-top: 15px;
 }
 
 
+/* scrollEffect */
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    
+    transform: translateY(0px);
+    opacity: 1;
+}
 
 /* Media-query */
+@media  screen and (max-width:860px) {
+    .education-list{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    padding: 2%;
+    }
+    .education-listImg{
+    height: 60%;
+    width: 100%;
+}
 
+.education-listdetails{
+    width: auto;
+    font-size: smaller;
+}
+    
+}
 
 
 @media screen and (max-width:768px) {
@@ -493,7 +630,9 @@ a {
     .skills_list{
         flex-basis: 100px; 
     }
-   
+    .Footer-Container {
+       flex-direction: column;
+    }
 
 
 }
