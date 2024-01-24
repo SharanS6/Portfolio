@@ -45,7 +45,7 @@ a {
     justify-content: space-between;
     align-items: center;
     margin-left: 10vw;
-    margin-right: 15vw;
+    margin-right: 6vw;
     flex-wrap: wrap;
     font-weight: 500;
     font-size: 16px;
@@ -290,8 +290,8 @@ a {
 .aboutMe p {
     margin: 10px 0;
     color: lightcyan;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: start;
+    /* text-justify: inter-word; */
 
 }
 
@@ -537,65 +537,70 @@ a {
     border-radius: 10px;
     cursor: pointer;
 
-    
+
 }
-.projects1-containerList:hover .project-popup{
+
+.projects1-containerList:hover .project-popup {
     height: 200px;
 
 }
 
-.projects1-containerList:hover .project-popup_code{
+.projects1-containerList:hover .project-popup_code {
     opacity: 1;
 }
-.projects1-containerList:hover .project-popup_code h3 a{
+
+.projects1-containerList:hover .project-popup_code h3 a {
     opacity: 1;
     color: white;
 }
+
 .project-popup h2 {
     /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
     color: white;
     padding: 10px;
-    
+
 }
 
 .project-popup_code {
     display: flex;
     flex-direction: column;
-    
+
     opacity: 0;
- 
+
     /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
     /* border-top: 1px solid white; */
     padding-top: 10px;
-  background: #60BAFA;
-  /* padding-bottom: 30px; */
-  width: 100%;
-  height: 70%;
-   
+    background: #60BAFA;
+    /* padding-bottom: 30px; */
+    width: 100%;
+    height: 70%;
+
 }
-.project-popup_code p{
+
+.project-popup_code p {
     color: black;
     padding: 10px;
 }
-.project-popup_code-btn{
+
+.project-popup_code-btn {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-   
+
 }
 
 .project-popup_code h3 a {
 
     color: white;
     cursor: pointer;
-   
+
 
 }
 
 .project-popup_code h3 {
     /* border: 2px solid white; */
     background-color: #000030;
-    
+
     border-radius: 20px;
     color: white;
     font-weight: 700;
@@ -806,6 +811,15 @@ a {
 
     .Footer-Container {
         flex-direction: column;
+    }
+    .about-container{
+        padding: 10px;
+    }
+    .aboutMe{
+        padding: 30px 25px ;
+    }
+    .skill-box1{
+        padding: 20px;
     }
 
 
